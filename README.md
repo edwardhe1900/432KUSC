@@ -15,13 +15,24 @@ A web application that streams KUSC Classical Radio and allows you to listen in 
 - npm (comes with Node.js)
 
 ### Install Dependencies
-Run this in your project directory:
+
+Run this in your project directory to install all required packages:
 
 ```sh
 npm install express got
 ```
 
-If you plan to use any other backend features, install additional dependencies as needed.
+Or, if you have a `package.json` (recommended), simply run:
+
+```sh
+npm install
+```
+
+**Required npm packages:**
+- `express` – Web server for backend/proxy
+- `got` – HTTP/streaming client for proxying radio streams
+
+If you add more backend features, install additional dependencies as needed.
 
 ### Start the App
 ```sh
