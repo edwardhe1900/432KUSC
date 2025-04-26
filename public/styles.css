@@ -1,0 +1,301 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'SF Pro Display', 'Segoe UI', 'Arial', sans-serif;
+  background: linear-gradient(120deg, #a6192e 0%, #ffcc00 100%);
+  background-size: 200% 200%;
+  animation: usc-gradient 40s ease-in-out infinite alternate;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #222;
+}
+
+@keyframes usc-gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes orange-fade {
+  0% {
+    background-position: 0% 50%;
+    background: linear-gradient(120deg, #fff4e6 0%, #ffd580 50%, #ff9900 100%);
+  }
+  30% {
+    background-position: 100% 50%;
+    background: linear-gradient(120deg, #ffe0b2 0%, #ffd580 50%, #ffb84d 100%);
+  }
+  60% {
+    background-position: 50% 100%;
+    background: linear-gradient(120deg, #fff4e6 0%, #ffd580 60%, #ffe0b2 100%);
+  }
+  100% {
+    background-position: 0% 50%;
+    background: linear-gradient(120deg, #fff4e6 0%, #ffd580 50%, #ff9900 100%);
+  }
+}
+
+
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  background: #fff;
+  border-radius: 22px;
+  padding: 2.5rem 2rem;
+  width: 92%;
+  max-width: 540px;
+  box-shadow: 0 8px 32px 0 rgba(166, 25, 46, 0.13), 0 1.5px 4px 0 rgba(255,204,0,0.08);
+  border: 2.2px solid #a6192e;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #ff9900;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+
+.player-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.frequency-display {
+  font-size: 2.6rem;
+  font-weight: 800;
+  min-width: 200px;
+  text-align: center;
+  color: #a6192e;
+  text-shadow: 0 2px 12px #ffcc0099, 0 1px 2px #fff9;
+  letter-spacing: 0.01em;
+  margin-bottom: 0.5rem;
+  transition: color 0.5s;
+}
+
+#current-frequency {
+  color: #ffcc00;
+}
+
+.audio-controls {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+audio {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.control-button {
+  padding: 0.8rem 2.2rem;
+  border: none;
+  border-radius: 18px;
+  background: linear-gradient(90deg, #a6192e 10%, #ffcc00 90%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.15rem;
+  box-shadow: 0 2px 18px 0 #a6192e55, 0 1px 2px #ffcc0099;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+  letter-spacing: 0.01em;
+  margin: 0 0.5rem;
+}
+
+.control-button:hover, .control-button:focus {
+  background: linear-gradient(90deg, #ffcc00 10%, #a6192e 90%);
+  color: #fff;
+  box-shadow: 0 6px 32px #a6192e88, 0 1.5px 4px #ffcc0099;
+  outline: none;
+  border: 2px solid #ffcc00;
+  transform: translateY(-2px) scale(1.04);
+}
+
+.frequency-toggle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.usc-logo-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 2.5px solid #a6192e;
+  border-radius: 50%;
+  width: 68px;
+  height: 68px;
+  cursor: pointer;
+  margin-bottom: 0.7rem;
+  transition: background 0.3s, border-color 0.3s, box-shadow 0.3s, transform 0.2s;
+  box-shadow: 0 2px 16px #a6192e55, 0 1px 2px #ffcc0099;
+  padding: 0;
+  position: relative;
+}
+.usc-logo-btn svg {
+  display: block;
+  margin: 0 auto;
+  width: 40px;
+  height: 52px;
+  filter: drop-shadow(0 2px 8px #ffcc0099);
+}
+.usc-logo-btn[aria-pressed="true"] {
+  background: linear-gradient(135deg, #a6192e 0%, #ffcc00 100%);
+  border-color: #ffcc00;
+}
+.usc-logo-btn:focus, .usc-logo-btn:hover {
+  outline: none;
+  border-color: #ffcc00;
+  box-shadow: 0 6px 32px #a6192e88, 0 2px 8px #ffcc0099;
+  transform: scale(1.06) rotate(-2deg);
+}
+.usc-logo-btn[aria-pressed="true"] svg path,
+.usc-logo-btn[aria-pressed="true"] svg text {
+  stroke: #fff;
+  fill: #fff;
+}
+
+
+.toggle-labels {
+  display: flex;
+  justify-content: space-between;
+  width: 140px;
+  font-size: 0.9rem;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 140px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #145214;
+  transition: .4s;
+  box-shadow: 0 2px 8px rgba(20,60,20,0.09);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.09);
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #a4de02;
+}
+
+input:checked + .slider:before {
+  transform: translateX(106px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.station-info {
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.spotify-login-btn {
+  display: flex;
+  align-items: center;
+  background: #1db954;
+  color: #fff;
+  border: none;
+  border-radius: 22px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 0.7rem 1.7rem;
+  margin: 0.5rem auto 1.2rem auto;
+  box-shadow: 0 2px 8px #1db95444;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+}
+.spotify-login-btn:hover, .spotify-login-btn:focus {
+  background: #169943;
+  box-shadow: 0 4px 16px #1db95455;
+  outline: none;
+  transform: scale(1.04);
+}
+#spotify-profile {
+  min-height: 28px;
+  text-align: center;
+  color: #222;
+  font-size: 1.08rem;
+  font-weight: 500;
+}
+
+.note {
+  font-style: italic;
+  margin-top: 0.8rem;
+  font-size: 1.05rem;
+  color: #a6192e;
+  opacity: 0.85;
+  letter-spacing: 0.01em;
+  text-shadow: 0 1px 6px #ffcc0099;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 1.5rem;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  .frequency-display {
+    font-size: 2rem;
+  }
+}
