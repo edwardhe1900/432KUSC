@@ -90,4 +90,4 @@ Then open your browser and visit [http://localhost:3000](http://localhost:3000)
 
 ## License
 MIT License
-![alt text](image.png)
+![alt text](image.jpg)
