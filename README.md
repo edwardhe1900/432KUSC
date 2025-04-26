@@ -37,6 +37,15 @@ The app will run at [http://localhost:3000](http://localhost:3000)
 - **Instant Toggle**: Switch between "Original" (bit-perfect) and "432Hz" (processed) playback instantly using the frequency toggle.
 - **Fallback Streams**: Automatically tries alternate KUSC streams if the primary stream is unavailable.
 
+## Spotify Features
+- **Spotify Login:** Secure OAuth login to connect your Spotify account.
+- **Profile Display:** Shows your Spotify display name and profile picture after login.
+- **Playlist & Track Browsing:** Browse your Spotify playlists and view tracks in each playlist.
+- **Playback Controls:** Play, pause, next, and previous track controls (requires Spotify Premium and an active device).
+- **Track Preview Playback:** For tracks with a Spotify preview, play the 30-second sample directly in the app.
+- **432Hz Preview Conversion:** Instantly pitch-shift Spotify previews to 432Hz using the Web Audio API.
+- **Modern UI Integration:** Spotify features are seamlessly integrated into the USC-themed interface.
+
 ## How It Works
 - The app proxies the KUSC stream through a Node.js Express server.
 - On the frontend, the audio is played using a custom web player.
