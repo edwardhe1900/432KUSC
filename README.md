@@ -2,6 +2,34 @@
 
 A web application that streams KUSC Classical Radio and allows you to listen in either the original 440Hz tuning or a 432Hz pitch-shifted version, believed by some to be more harmonically resonant.
 
+## UI Preview
+
+![App UI Preview](public/ui-preview.png)
+
+*Modern, USC-themed interface with Spotify login, playlist browsing, 432Hz pitch-shifting, and audio upload features.*
+
+## Installation & Setup
+
+### Prerequisites
+- Node.js (v16+ recommended)
+- npm (comes with Node.js)
+
+### Install Dependencies
+Run this in your project directory:
+
+```sh
+npm install express got
+```
+
+If you plan to use any other backend features, install additional dependencies as needed.
+
+### Start the App
+```sh
+npm start
+```
+
+The app will run at [http://localhost:3000](http://localhost:3000)
+
 ## Features
 - **Live KUSC Streaming**: Listen to the official KUSC radio stream directly from your browser.
 - **Bit-Perfect 440Hz Playback**: The "Original" mode uses the native HTML5 audio element for truly bit-perfect, unprocessed playback—no resampling, no processing, just the original KUSC stream.
@@ -62,3 +90,4 @@ Then open your browser and visit [http://localhost:3000](http://localhost:3000)
 
 ## License
 MIT License
+![alt text](image.png)
